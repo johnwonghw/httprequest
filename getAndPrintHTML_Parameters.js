@@ -2,11 +2,6 @@ function getAndPrintHTML (options) {
 // while https is built-in to Node, it is a module, so it must be required
   var https = require('https');
 
-  var options = {
-    host: '',
-    path: ''
-  };
-
   // notice that https.get takes a callback with one parameter -
   // response, which is a Stream that represents the HTTP response
   https.get(requestOptions, function (response) {
@@ -41,7 +36,7 @@ var requestOptions = {
 
 
 
-getAndPrintHTML ()
+getAndPrintHTML (requestOptions)
 
 
 
