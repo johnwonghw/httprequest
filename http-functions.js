@@ -10,7 +10,6 @@ module.exports = function getHTML (options, callback) {
       let rawData = '';
       response.on ('data', function (chunk) {
         rawData += chunk;
-        console.log (chunk, "\n");
       });
 
       response.on('end', function() {
